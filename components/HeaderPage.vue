@@ -1,12 +1,14 @@
 <script setup lang="ts"></script>
 <template>
-    <header class="bg-red-900 text-zinc-50 text-[28px]">
-        <div>
-            <h1 class="text-4xl">Lift Off MMi</h1>
-            <div></div>
+    <header class="bg-red-900 text-zinc-50 text-[28px] p-8">
+        <div class="flex justify-between items-center">
+            <a href="../"><img src="../public/icons/logo_liftoff.svg" alt="Logo de LiftOff Mmi"></a>
+            <a href="../" class="hidden"><img src=" ../public/icons/logo_mmi_white.png"
+                    alt="Logo de LiftOff Mmi" class="h-[50px]"></a>
+            <div>*</div>
         </div>
-        <nav>
-            <ul class="flex flex-col gap-28 justify-end">
+        <nav class="hidden pt-24">
+            <ul class="flex flex-col gap-28 text-right items-end *:*:*:border-b-2 *:*:*:border-zinc-50">
                 <div class="flex flex-col gap-8">
                     <li><a href="">CEGEP Matane</a></li>
                     <li><a href="">CEGEP Vanier</a></li>
