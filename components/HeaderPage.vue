@@ -11,7 +11,7 @@
             <ul class="flex flex-col gap-28 text-right items-end *:*:*:border-b-2 *:*:*:border-zinc-50">
                 <div class="flex flex-col gap-8">
                     <li><a href="">CEGEP Matane</a></li>
-                    <li><a href="">CEGEP Vanier</a></li>
+                    <li><a href="/vanier">CEGEP Vanier</a></li>
                     <li><a href="">Préparer son départ</a></li>
                     <li><a href="">Évènements</a></li>
                     <li><a href="">Témoignages</a></li>
