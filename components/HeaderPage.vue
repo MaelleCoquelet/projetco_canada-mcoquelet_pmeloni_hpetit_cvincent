@@ -29,7 +29,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-    <header class="sticky top-0 flex items-center justify-between bg-red-900 text-zinc-50 text-[28px] p-8 h-24">
+    <header class="sticky top-0 flex items-center justify-between text-zinc-50 text-[28px] p-8 h-24">
         <div class="flex justify-between items-center">
             <a href="../" :class="{ 'hidden': isMenuOpen }"><img src="../public/icons/logo_liftoff.svg"
                     alt="Logo de LiftOff Mmi"></a>
