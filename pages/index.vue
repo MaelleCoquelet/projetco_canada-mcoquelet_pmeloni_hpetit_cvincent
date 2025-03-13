@@ -6,25 +6,27 @@ import '../styles/styles.css';
 
 <template>
   <div>
-    <section class="col-span-12 grid grid-cols-12 bg-zinc-600">
-      <img src="" alt="Image chouette" class="col-span-12">
-      <h1 class="col-span-12">Dépassez vos limites et prenez votre envol</h1>
-      <p class="col-span-12">Osez franchir un nouveau cap dans votre parcours académique et personnel. L'échange universitaire au Canada est
+    <section class="col-span-12 text-white grid grid-cols-12 bg-[url(/img/mainphoto.jpg)] p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20">
+      <h1 class="col-span-12 text-6xl sm:text-8xl md:text-8xl font-bold mt-14 sm:mt-14 md:mt-24 col-start-1 col-end-10">Dépassez vos limites et prenez votre envol</h1>
+      <p class="col-span-12 text-lg sm:text-xl col-start-1 col-end-9 mt-8 sm:mt-14">Osez franchir un nouveau cap dans votre parcours académique et personnel. L'échange universitaire au Canada est
         une opportunité unique d’élargir vos horizons, de découvrir de nouvelles méthodes d’enseignement, et de vivre
         une
         expérience inoubliable.</p>
-      <p class="col-span-12">Envie d’en savoir plus sur cette aventure ? Explorez ce que ces cégeps canadiens peuvent vous offrir et comment
+      <p class="col-span-12 text-lg sm:text-xl col-start-1 col-end-9 mt-4 sm:mt-5">Envie d’en savoir plus sur cette aventure ? Explorez ce que ces cégeps canadiens peuvent vous offrir et comment
         vous pouvez en faire partie !</p>
-      <a href="/vanier" class="col-span-12"></a>
+      <button class="bg-red-700 text-white py-2 px-4 rounded mt-12 col-start-1 col-end-3 mb-10">
+        <a href="/vanier">Découvrir le parcours</a>
+      </button>
     </section>
 
-
-
     <section class="bg-red-900 col-span-12 grid grid-cols-12">
+      <div class="col-span-12 mt-14 flex justify-center">
+        <img src="/public/img/map.png" alt="Carte du monde" class=" object-contain md:object-cover" />
+      </div>
       <div class="col-span-12">
-        <div id="stats" class="py-24 sm:py-32">
+        <div id="stats" class="py-8 sm:py-8">
           <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <dl class="grid grid-conée1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+            <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
               <div class="mx-auto flex max-w-xs flex-col gap-y-4">
                 <dt class="sm:text-3xl leading-7 text-white">MMI déjà partis</dt>
                 <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-8xl">
@@ -52,7 +54,7 @@ import '../styles/styles.css';
             </dl>
           </div>
         </div>
-        <p class=" sm:text-xl font-bold text-white px-64"> Un échange riche en kilomètres… et en poutines ! En 45 ans d’échanges, nos étudiants ont parcouru 495 630 km.
+        <p class=" sm:text-xl font-bold text-white px-64 mb-10 mt-10"> Un échange riche en kilomètres… et en poutines ! En 45 ans d’échanges, nos étudiants ont parcouru 495 630 km.
           Avec 7 étudiants qui partent chaque année, ça fait déjà 315 étudiants qui ont découvert les joies de la vie
           canadienne grâce à MMI.</p>
       </div>
