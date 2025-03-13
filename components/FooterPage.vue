@@ -2,9 +2,9 @@
     <footer class="bg-red-900">
         <nav class="flex flex-col p-6 gap-8 text-lg text-zinc-50 font-semibold">
             <ul class="flex flex-col gap-2">
-                <li><a href="">CEGEP Matane</a></li>
+                <li><a href="/matane">CEGEP Matane</a></li>
                 <li><a href="/vanier">CEGEP Vanier</a></li>
-                <li><a href="">Préparer son départ</a></li>
+                <li><a href="/preparer-son-depart">Préparer son départ</a></li>
             </ul>
             <ul class="flex gap-2 items-center">
                 <li><a href="https://www.facebook.com/mmimontbeliard/?locale=fr_FR"><img
