@@ -29,15 +29,24 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-    <header class="bg-red-900 text-zinc-50 text-[28px] p-8">
+    <header class="sticky top-0 flex items-center justify-between bg-red-900 text-zinc-50 text-[28px] p-8 h-24">
         <div class="flex justify-between items-center">
-            <a href="../"><img src="../public/icons/logo_liftoff.svg" alt="Logo de LiftOff Mmi"></a>
-            <a href="../" class="hidden"><img src=" ../public/icons/logo_mmi_white.png"
-                    alt="Logo de LiftOff Mmi" class="h-[50px]"></a>
-            <div @click="toggleMenu" class="cursor-pointer menu-toggle">☰</div>
+            <a href="../" :class="{ 'hidden': isMenuOpen }"><img src="../public/icons/logo_liftoff.svg"
+                    alt="Logo de LiftOff Mmi"></a>
         </div>
-        <nav :class="{'translate-x-0': isMenuOpen, 'translate-x-full': !isMenuOpen}" class="fixed top-0 right-0 h-full w-full bg-red-900 text-white transform transition-transform duration-300 ease-in-out pt-24 md:w-2/3 md:pt-0">
-            <div @click="closeMenu" class="absolute top-4 right-4 cursor-pointer">X</div>
+        <a href="../" class="opacity-0 absolute z-10 md:hidden"
+            :class="{ 'opacity-100 transform transition duration-500': isMenuOpen }"><img
+                src=" ../public/icons/logo_mmi_white.png" alt="Logo de LiftOff Mmi" class="h-[50px]"></a>
+        <button
+            class="relative z-10 flex h-4 w-6 flex-col justify-between md:hidden *:block *:ease *:h-[2px] *:w-full *:transform *:rounded-full *:bg-white *:transition *:duration-300"
+            @click="toggleMenu">
+            <span :class="{ 'translate-y-[6px] rotate-45': isMenuOpen }"></span>
+            <span :class="{ 'opacity-0': isMenuOpen }"></span>
+            <span :class="{ '-translate-y-[8px] -rotate-45': isMenuOpen }"></span>
+        </button>
+
+        <nav :class="{ 'translate-x-0': isMenuOpen, 'translate-x-full': !isMenuOpen }"
+            class="fixed top-0 right-0 h-full w-full bg-red-900 text-white transform transition-transform duration-300 ease-in-out pt-24 md:hidden">
             <ul class="flex flex-col gap-8 text-center md:text-right md:items-end border-b-2 border-zinc-50">
                 <li><a href="/matane">CEGEP Matane</a></li>
                 <li><a href="/vanier">CEGEP Vanier</a></li>
