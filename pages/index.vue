@@ -6,7 +6,7 @@ import '../styles/styles.css';
 
 <template>
   <div>
-    <section class="col-span-12 text-white grid grid-cols-12 bg-[url(/img/mainphoto.jpg)] p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20">
+    <section class=" col-span-12 text-white grid grid-cols-12 bg-[url(/img/mainphoto.jpg)] p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20">
       <h1 class="col-span-12 text-6xl sm:text-8xl md:text-8xl font-bold mt-14 sm:mt-14 md:mt-24 col-start-1 col-end-10">Dépassez vos limites et prenez votre envol</h1>
       <p class="col-span-12 text-lg sm:text-xl col-start-1 col-end-9 mt-8 sm:mt-14">Osez franchir un nouveau cap dans votre parcours académique et personnel. L'échange universitaire au Canada est
         une opportunité unique d’élargir vos horizons, de découvrir de nouvelles méthodes d’enseignement, et de vivre
@@ -59,26 +59,28 @@ import '../styles/styles.css';
           canadienne grâce à MMI.</p>
       </div>
     </section>
-    <section>
-      <video src=""></video>
-      <h2>Entre découvertes, rencontres et apprentissages : la vie au Canada</h2>
-      <p>La vie au Canada implique un changement de culture. Plongez vous dans une ambiance chaleureuse, riche en
-        rencontres et en expériences. Découvrez la culture québécoise au travers du sport universitaire et d'évènements
-        sportifs typiques. Enrichissez votre parcours avec de nouvelles compétences, et profitez de la liberté offerte
-        par
-        les cursus de Matane et Vanier. Entre ville et nature, explorez de nouveaux horizons et ouvrez vous à de
-        nouvelles
-        expériences. Partagez votre savoir-faire et profitez des talents des équipes québécoises. Pendant votre séjour,
-        expérimentez, apprenez et découvrez.</p>
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8 p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20">
+      <div class="aspect-w-16 aspect-h-9">
+        <iframe class="w-full h-full" width="560" height="315" src="https://www.youtube.com/embed/iHKhxctLsLk?si=PtB23zi6yHMxxeiV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div>
+        <h2 class="text-4xl font-bold mb-4">Entre découvertes, rencontres et apprentissages : la vie au Canada</h2>
+        <p class="mt-5">La vie au Canada implique un changement de culture. Plongez vous dans une ambiance chaleureuse, riche en
+          rencontres et en expériences. Découvrez la culture québécoise au travers du sport universitaire et d'évènements
+          sportifs typiques.</p>
+          <p class="mt-5">Enrichissez votre parcours avec de nouvelles compétences, et profitez de la liberté offerte
+          par
+          les cursus de Matane et Vanier. Entre ville et nature, explorez de nouveaux horizons et ouvrez vous à de
+          nouvelles
+          expériences.</p>
+          <p class="mt-5">Partagez votre savoir-faire et profitez des talents des équipes québécoises. Pendant votre séjour,
+          expérimentez, apprenez et découvrez.</p>
+      </div>
     </section>
     <section>
-      <h2>Suivez les actualités</h2>
+      <h2 class="text-center font-bold text-3xl ">Suivez les actualités</h2>
       <div>
-        <h3>Journée portes ouvertes</h3>
-        <p>1er février 2026 - de 8h à 17h</p>
-        <p>Venez rencontrer nos étudiants actuels et anciens lors de notre Journée Portes Ouvertes ! Une occasion unique
-          de découvrir le département MMI. Profitez de cette journée pour poser vos questions, échanger avec les
-          intervenants et vous inspirer de leurs expériences.</p>
+       CONTENU WORDPRESS
       </div>
     </section>
   </div>
