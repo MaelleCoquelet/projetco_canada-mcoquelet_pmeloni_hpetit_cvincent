@@ -3,7 +3,7 @@ const route = useRoute()
 </script>
 
 <template>
-    <section class="col-span-12 grid grid-cols-12 bg-zinc-600">
+    <section class="col-span-12 grid grid-cols-12 bg-[url(/img/vanier.jpg)]">
         <nav class="w-full text-white col-start-2 col-end-8">
             <div class="items-left pt-96 pb-16">
                 <h1 class="text-9xl font-bold">VANIER</h1>
