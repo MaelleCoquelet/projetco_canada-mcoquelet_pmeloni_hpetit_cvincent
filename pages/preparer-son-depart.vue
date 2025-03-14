@@ -3,10 +3,10 @@ const route = useRoute()
 </script>
 
 <template>
-    <section class="col-span-12 grid grid-cols-12 bg-zinc-600">
+    <section class="col-span-12 grid grid-cols-12 bg-[url(/img/depart.jpg)]">
         <nav class="w-full text-white col-start-2 col-end-8">
             <div class="items-left pt-96 pb-16 flex flex-col gap-8">
-                <h1 class="text-9xl font-bold">Préparer son départ</h1>
+                <h1 class="text-8xl font-bold">Préparer son départ</h1>
                 <h3 class="text-2xl">Vous trouverez sur cette page tout ce qu’il faut prévoir pour
                     un voyage serein.</h3>
             </div>
