@@ -31,10 +31,11 @@ console.log(status.value)
         <div v-else-if="status === 'error'" class="text-center text-lg text-red-500 font-semibold">Une erreur s'est produite</div>
         <ul v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <li v-for="page in pages" :key="page.id" class="bg-red-900 text-white shadow-lg rounded-xl p-6 hover:scale-110 transform transition duration-300 ">
+                <NuxtLink :to="`/evenements/${page.id}`">
                 <h3 class="text-2xl font-semibold mb-2">{{ page.acf.titre }}</h3>
                 <p class="text-lg text-gray-300 mb-2">{{ page.acf.date }}</p>
                 <p class="text-sm">{{ page.acf.texte_1.length > 250 ? page.acf.texte_1.substring(0, 250) + '...' : page.acf.texte_1 }}</p>
-                <NuxtLink :to="`/evenements/${page.id}`">
+            
     <button class="px-6 py-3 mt-5 bg-white text-red-900 font-semibold rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition">En savoir plus ></button>
 </NuxtLink>
             </li>

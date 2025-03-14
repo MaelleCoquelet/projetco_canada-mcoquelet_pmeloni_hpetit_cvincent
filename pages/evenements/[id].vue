@@ -31,8 +31,32 @@ const { data: evenement, status, error } = await useAsyncData(
         <div class="w-full bg-red-900 text-white">
           <div class="col-start-3 col-end-11 mt-16 mb-16">
             <p class="text-lg mt-5">{{ evenement.acf.texte_1 }}</p> <!-- Affichage du texte -->
+            <div>
+                <div>
+                    <!-- svg -->
+                    <p> {{ evenement.acf.date }}</p>
+                </div>
+                <div>
+                    <!-- svg -->
+                <div>
+                    <p>IUT Nord Franche Comté, </p>
+                    <p>4 Place Lucien Tharradin,</p>
+                    <p>25200 Montbéliard</p>
+                </div>
+                </div>
+            </div>
           </div>
         </div>
+
+        <div class="w-full bg-white">
+            <ul>
+                <li>
+                    <h2>{{ evenement.acf.titre_2 }}</h2>
+                    <p>{{ evenement.acf.texte_2 }}</p>
+                </li>
+            </ul>
+        </div>
+
       </div>
     </div>
   </div>
