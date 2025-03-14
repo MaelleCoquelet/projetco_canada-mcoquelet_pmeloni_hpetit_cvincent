@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   ],
   runtimeConfig: {
     public: {
-      wordpressUrl: 'https://liftoff-mmi.chloe-vct.fr/'
+      wordpressUrl: 'https://liftoff-mmi.chloe-vct.fr/wp-json',
     }
   },
   compatibilityDate: '2024-11-01',
