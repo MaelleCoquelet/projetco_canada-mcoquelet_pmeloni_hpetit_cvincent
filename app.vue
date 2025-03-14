@@ -1,9 +1,12 @@
 <template>
-  <HeaderPage />
-  <div>
-    <NuxtRouteAnnouncer />
-
+  <div class="bg-red-900">
+    <HeaderPage />
+    <div>
+      <NuxtRouteAnnouncer />
+    </div>
+    <div class="bg-white">
+      <NuxtPage />
+    </div>
+    <FooterPage />
   </div>
-  <NuxtPage />
-  <FooterPage />
 </template>
