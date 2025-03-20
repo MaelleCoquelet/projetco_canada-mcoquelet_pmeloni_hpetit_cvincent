@@ -22,7 +22,7 @@ const { data: pages, status, error, refresh, clear } = await useAsyncData(
         </div>
     </section>
     <section class="col-span-12 grid grid-cols-12 text-black bg-white -z-10">
-    <div class="col-start-3 col-end-11 my-9">
+    <div class="col-start-3 col-end-11 my-9 -z-10">
         <div v-if="status === 'pending'" class="text-center text-lg font-semibold">Chargement...</div>
         <div v-else-if="status === 'error'" class="text-center text-lg text-red-900 font-semibold">Une erreur s'est produite</div>
         <ul v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6  ">
