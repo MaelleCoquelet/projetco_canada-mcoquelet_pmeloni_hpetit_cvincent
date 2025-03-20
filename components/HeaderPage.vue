@@ -90,8 +90,8 @@ onBeforeUnmount(() => {
                 <li><a href="/matane">CEGEP Matane</a></li>
                 <li><a href="/vanier">CEGEP Vanier</a></li>
                 <li><a href="/preparer-son-depart">Préparer son départ</a></li>
-                <li><a href="">Évènements</a></li>
-                <li><a href="">Témoignages</a></li>
+                <li><a href="/evenements">Évènements</a></li>
+                <li><a href="/temoignages">Témoignages</a></li>
                 <li><a href="">Contact</a></li>
             </ul>
         </nav>
@@ -101,8 +101,8 @@ onBeforeUnmount(() => {
                 <li><a href="/matane">CEGEP Matane</a></li>
                 <li><a href="/vanier">CEGEP Vanier</a></li>
                 <li><a href="/preparer-son-depart">Préparer son départ</a></li>
-                <li><a href="">Évènements</a></li>
-                <li><a href="">Témoignages</a></li>
+                <li><a href="/evenements">Évènements</a></li>
+                <li><a href="/temoignages">Témoignages</a></li>
                 <li><a href="">Contact</a></li>
             </ul>
         </nav>
