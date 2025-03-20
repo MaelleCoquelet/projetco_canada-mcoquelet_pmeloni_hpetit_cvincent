@@ -72,7 +72,7 @@ const route = useRoute()
     <!-- Temoignages -->
 
     <section class="col-span-12 grid grid-cols-12 text-black bg-red-100">
-        <div class="col-start-3 col-end-11 mt-16 mb-16">
+        <div class="col-start-3 col-end-11 mt-16 mb-16 -z-10">
             <h5 class="text-2xl font-bold mb-8">Qu’en disent les étudiants ?</h5>
             <div class="relative">
 
