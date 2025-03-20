@@ -18,8 +18,8 @@ const { data: temoignage, status, error } = await useAsyncData(
     Une erreur s'est produite
   </div>
 
-  <div v-else class="w-full  bg-zinc-600"> <!-- w-full pour toute la largeur -->
-    <div class="col-span-12 w-full"> <!-- Cette div prend toute la largeur -->
+  <div v-else class="w-full  bg-zinc-600"> 
+    <div class="col-span-12 w-full "> 
       <div v-if="temoignage">
         <nav class="w-full text-white">
           <div class="items-left pt-96 pb-16">

@@ -22,7 +22,7 @@ console.log(status.value)
             <p class="text-lg mt-5"  >Cet événement est une occasion unique de plonger dans l'ambiance dynamique de notre département et d'obtenir des réponses à toutes vos questions. Que vous soyez curieux, futur étudiant ou simplement intéressé par le monde du digital, venez vivre une journée riche en découvertes et en inspirations dans un cadre convivial et stimulant.</p>
         </div>
     </section>
-    <section class="col-span-12 grid grid-cols-12 text-black bg-white mb-5">
+    <section class="col-span-12 grid grid-cols-12 text-black bg-white mb-5 -z-10">
     <div class="col-start-3 col-end-11 mt-16 mb-16">
         <h2 class="text-4xl font-bold">Prochains événements</h2>
     </div>
@@ -30,7 +30,7 @@ console.log(status.value)
         <div v-if="status === 'pending'" class="text-center text-lg font-semibold">Chargement...</div>
         <div v-else-if="status === 'error'" class="text-center text-lg text-red-500 font-semibold">Une erreur s'est produite</div>
         <ul v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <li v-for="page in pages" :key="page.id" class="bg-red-900 text-white shadow-lg rounded-xl p-6 hover:scale-110 transform transition duration-300 ">
+            <li v-for="page in pages" :key="page.id" class="bg-red-900 text-white shadow-lg rounded-xl p-6 hover:scale-105 transform transition duration-300 ">
                 <NuxtLink :to="`/evenements/${page.id}`">
                 <h3 class="text-2xl font-semibold mb-2">{{ page.acf.titre }}</h3>
                 <p class="text-lg text-gray-300 mb-2">{{ page.acf.date }}</p>
