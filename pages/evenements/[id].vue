@@ -7,6 +7,24 @@ const { data: evenement, status, error } = await useAsyncData(
   'evenement',
   () => $fetch(`https://liftoff-mmi.chloe-vct.fr/wp-json/wp/v2/pages/${evenementId}`)
 );
+
+// Variable pour stocker l’URL de l’image
+const imageUrl = ref<string | null>(null);
+
+// Récupère l'URL de l’image si c’est un ID
+watchEffect(async () => {
+  if (evenement.value?.acf?.['image-bg']) {
+    const imageId = evenement.value.acf['image-bg'];
+
+    // Vérifie si c'est un nombre (au lieu d'une URL directe)
+    if (typeof imageId === "number") {
+      const imageData = await $fetch(`https://liftoff-mmi.chloe-vct.fr/wp-json/wp/v2/media/${imageId}`);
+      imageUrl.value = imageData.source_url;
+    } else {
+      imageUrl.value = imageId; // Si c'est déjà une URL, l'utiliser directement
+    }
+  }
+});
 </script>
 
 <template>
@@ -19,15 +37,17 @@ const { data: evenement, status, error } = await useAsyncData(
   </div>
 
   <div v-else class="w-full bg-zinc-600"> <!-- w-full pour toute la largeur -->
-    <div class="w-full"> <!-- Cette div prend toute la largeur -->
+    <div
+    class="w-full h-screen bg-cover bg-no-repeat bg-bottom"
+    :style="{ backgroundImage: imageUrl ? `url(${imageUrl})` : '' }"
+  ><!-- Cette div prend toute la largeur -->
       <div v-if="evenement">
-        <section class="relative w-full  flex items-center justify-center bg-cover bg-center text-white"
-               :style="`background-image: url(${evenement.acf.image})`">
-        <div class="p-6 ">
-          <h1 class="text-9xl font-bold">{{ evenement.acf.titre }}</h1>
-          <p class="text-2xl mt-4">{{ evenement.acf.intro }}</p>
+        <nav class=" w-full text-white">
+        <div class="items-left pt-96 pb-16   bg-black bg-opacity-50 ">
+          <h1 class="text-9xl font-bold mx-16">{{ evenement.acf.titre }}</h1>
+          <p class="text-2xl mx-16 mt-6">{{ evenement.acf.intro }}</p>
         </div>
-      </section>
+      </nav>
 
         <section class="bg-red-900 text-white py-16 px-8">
         <div class="max-w-4xl mx-auto">

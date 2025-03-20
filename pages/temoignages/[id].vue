@@ -39,7 +39,7 @@ watchEffect(async () => {
 
   <!-- Div principale avec l'image en background -->
   <div
-    class="w-full h-screen bg-cover bg-no-repeat bg-bottom"
+    class="w-full h-screen bg-cover bg-no-repeat bg-center"
     :style="{ backgroundImage: imageUrl ? `url(${imageUrl})` : '' }"
   >
     <div class="col-span-12 w-full">
@@ -47,7 +47,7 @@ watchEffect(async () => {
         <nav class="w-full text-white">
           <div class="items-left pt-96 pb-16   bg-black bg-opacity-50">
             <h1 class="text-9xl font-bold mx-16">{{ temoignage.acf.nom_prenom }}</h1>
-            <p class="text-2xl mx-16">{{ temoignage.acf.date_echanges_scolaire }}</p>
+            <p class="text-2xl mx-16 mt-6">{{ temoignage.acf.date_echanges_scolaire }}</p>
           </div>
         </nav>
 
