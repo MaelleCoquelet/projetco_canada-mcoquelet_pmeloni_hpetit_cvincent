@@ -30,7 +30,7 @@ onBeforeUnmount(() => {
 
 <template>
     <header
-        class="sticky top-0 flex items-center justify-between text-zinc-50 text-[28px] p-8 h-24 bg-red-900 bg-opacity-80">
+        class="sticky top-0 flex items-center justify-between text-zinc-50 text-[28px] p-8 h-24 bg-red-900 bg-opacity-80 md:px-20">
         <div class="flex justify-between items-center">
             <a href="../" :class="{ 'hidden': isMenuOpen }">
                 <LogoLiftoff class="w-16 h-16" />
@@ -55,7 +55,6 @@ onBeforeUnmount(() => {
                 <li><a href="/preparer-son-depart">Préparer son départ</a></li>
                 <li><a href="/evenements">Évènements</a></li>
                 <li><a href="/temoignages">Témoignages</a></li>
-                <li><a href="">Contact</a></li>
             </ul>
         </nav>
 
@@ -66,7 +65,6 @@ onBeforeUnmount(() => {
                 <li><a href="/preparer-son-depart">Préparer son départ</a></li>
                 <li><a href="/evenements">Évènements</a></li>
                 <li><a href="/temoignages">Témoignages</a></li>
-                <li><a href="">Contact</a></li>
             </ul>
         </nav>
     </header>
