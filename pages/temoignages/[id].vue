@@ -1,15 +1,34 @@
 <script setup lang="ts">
 const route = useRoute();
-const temoignageId = route.params.id; // Récupère l'ID de l'URL
+const temoignageId = route.params.id; // Récupère l'ID du témoignage
 
-// Utilise l'ID pour récupérer les données spécifiques à cet événement
+// Récupère les données du témoignage
 const { data: temoignage, status, error } = await useAsyncData(
-  'temoignage',
+  `temoignage-${temoignageId}`,
   () => $fetch(`https://liftoff-mmi.chloe-vct.fr/wp-json/wp/v2/posts/${temoignageId}`)
 );
+
+// Variable pour stocker l’URL de l’image
+const imageUrl = ref<string | null>(null);
+
+// Récupère l'URL de l’image si c’est un ID
+watchEffect(async () => {
+  if (temoignage.value?.acf?.['image-bg']) {
+    const imageId = temoignage.value.acf['image-bg'];
+
+    // Vérifie si c'est un nombre (au lieu d'une URL directe)
+    if (typeof imageId === "number") {
+      const imageData = await $fetch(`https://liftoff-mmi.chloe-vct.fr/wp-json/wp/v2/media/${imageId}`);
+      imageUrl.value = imageData.source_url;
+    } else {
+      imageUrl.value = imageId; // Si c'est déjà une URL, l'utiliser directement
+    }
+  }
+});
 </script>
 
 <template>
+  
   <div v-if="status === 'pending'" class="text-center text-lg font-semibold">
     Chargement...
   </div>
@@ -18,38 +37,49 @@ const { data: temoignage, status, error } = await useAsyncData(
     Une erreur s'est produite
   </div>
 
-  <div v-else class="w-full  bg-zinc-600"> 
-    <div class="col-span-12 w-full "> 
+  <!-- Div principale avec l'image en background -->
+  <div
+    class="w-full h-screen bg-cover bg-no-repeat bg-center"
+    :style="{ backgroundImage: imageUrl ? `url(${imageUrl})` : '' }"
+  >
+    <div class="col-span-12 w-full">
       <div v-if="temoignage">
         <nav class="w-full text-white">
-          <div class="items-left pt-96 pb-16">
-            <h1 class="text-9xl font-bold">{{ temoignage.acf.nom_prenom }}</h1>
-            <p class="text-2xl">{{ temoignage.acf.date_echanges_scolaire}}</p>
+          <div class="items-left pt-96 pb-16   bg-black bg-opacity-50">
+            <h1 class="text-9xl font-bold mx-16">{{ temoignage.acf.nom_prenom }}</h1>
+            <p class="text-2xl mx-16 mt-6">{{ temoignage.acf.date_echanges_scolaire }}</p>
           </div>
         </nav>
-        <div class=" bg-white texte-black"  >
-        <h3 class="font-bold text-xl" >Qu'est-ce qui vous a motivé à choisir le Québec pour votre échange universitaire ?</h3>
-        <p>{{ temoignage.acf.question1 }}</p>
-        
-        <h3 class="font-bold text-xl" >Quelles différences culturelles vous ont le plus marqué en arrivant au Québec ? </h3>
-        <p>{{ temoignage.acf.question2 }}</p>
-        <h3 class="font-bold text-xl" >Quelles sont les différences entre le système universitaire québécois et celui français ?</h3>
-        <p>{{ temoignage.acf.question3 }}</p>
-        <h3 class="font-bold text-xl" >Y a-t-il une tradition ou un aspect de la culture québécoise qui vous a particulièrement plu ?  </h3>
-        <p>{{ temoignage.acf.question4 }}</p>
-        <h3 class="font-bold text-xl" >Y a-t-il des astuces ou des choses à savoir pour réussir son intégration, sur le plan académique ou personnel ? </h3>
-        <p>{{ temoignage.acf.question5 }}</p>
-        <h3 class="font-bold text-xl" >Pouvez-vous partager une anecdote marquante ou drôle qui illustre votre vie au Québec ? </h3>
-        <p>{{ temoignage.acf.question6 }}</p>
-        <h3 class="font-bold text-xl" >Avez-vous rencontré des difficultés particulières pendant votre séjour, si oui, voulez-vous en parler ?</h3>
-        <p>{{ temoignage.acf.question7 }}</p>
-        <h3 class="font-bold text-xl" >Avec le recul, souhaitez-vous réitérer cette expérience ? Si oui, changeriez-vous quelque chose ?</h3>
-        <p>{{ temoignage.acf.question8 }}</p>
-       </div>
 
-       </div>
-       
+        <div class="bg-white text-black container mx-auto p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20">
+          <h3 class="font-bold text-xl">Qu'est-ce qui vous a motivé à choisir le Québec pour votre échange universitaire ?</h3>
+          <p>{{ temoignage.acf.question1 }}</p>
+
+          <h3 class="font-bold text-xl">Quelles différences culturelles vous ont le plus marqué en arrivant au Québec ?</h3>
+          <p>{{ temoignage.acf.question2 }}</p>
+
+          <h3 class="font-bold text-xl">Quelles sont les différences entre le système universitaire québécois et celui français ?</h3>
+          <p>{{ temoignage.acf.question3 }}</p>
+
+          <h3 class="font-bold text-xl">Y a-t-il une tradition ou un aspect de la culture québécoise qui vous a particulièrement plu ?</h3>
+          <p>{{ temoignage.acf.question4 }}</p>
+
+          <h3 class="font-bold text-xl">Y a-t-il des astuces ou des choses à savoir pour réussir son intégration, sur le plan académique ou personnel ?</h3>
+          <p>{{ temoignage.acf.question5 }}</p>
+
+          <h3 class="font-bold text-xl">Pouvez-vous partager une anecdote marquante ou drôle qui illustre votre vie au Québec ?</h3>
+          <p>{{ temoignage.acf.question6 }}</p>
+
+          <h3 class="font-bold text-xl">Avez-vous rencontré des difficultés particulières pendant votre séjour, si oui, voulez-vous en parler ?</h3>
+          <p>{{ temoignage.acf.question7 }}</p>
+
+          <h3 class="font-bold text-xl">Avec le recul, souhaitez-vous réitérer cette expérience ? Si oui, changeriez-vous quelque chose ?</h3>
+          <p>{{ temoignage.acf.question8 }}</p>
+        </div>
+      </div>
+    
     </div>
     
-</div>
+  </div>
+
 </template>

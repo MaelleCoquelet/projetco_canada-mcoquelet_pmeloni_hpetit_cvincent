@@ -22,11 +22,11 @@ console.log(status.value)
             <p class="text-lg mt-5"  >Cet événement est une occasion unique de plonger dans l'ambiance dynamique de notre département et d'obtenir des réponses à toutes vos questions. Que vous soyez curieux, futur étudiant ou simplement intéressé par le monde du digital, venez vivre une journée riche en découvertes et en inspirations dans un cadre convivial et stimulant.</p>
         </div>
     </section>
-    <section class="col-span-12 grid grid-cols-12 text-black bg-white mb-5 -z-10">
+    <section class="col-span-12 grid grid-cols-12 text-black bg-white mb-5">
     <div class="col-start-3 col-end-11 mt-16 mb-16">
         <h2 class="text-4xl font-bold">Prochains événements</h2>
     </div>
-    <div class="col-start-3 col-end-11 -z-10">
+    <div class="col-start-3 col-end-11 mb-9 ">
         <div v-if="status === 'pending'" class="text-center text-lg font-semibold">Chargement...</div>
         <div v-else-if="status === 'error'" class="text-center text-lg text-red-500 font-semibold">Une erreur s'est produite</div>
         <ul v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
