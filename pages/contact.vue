@@ -30,7 +30,7 @@ export default {
                     message: this.message,
                 }),
             });
-            alert("Votre message a bien été envoyé !"); 
+            alert("Votre message a bien été envoyé !");
             this.resetForm();
             window.location.reload();
         },
@@ -57,7 +57,7 @@ export default {
         </header>
     </section>
     <section>
-        <div class="flex flex-col gap-3 bg-red-900 text-white px-8 py-8 md:px-32 py-10 text-md md:text-lg">
+        <div class="flex flex-col gap-3 bg-red-900 text-white px-8 py-8 md:px-32 md:py-10 text-md md:text-lg">
             <p>Nous sommes là pour vous aider à chaque étape de votre voyage. Que ce soit pour obtenir des informations
                 sur
                 nos programmes, comprendre les démarches à suivre, ou simplement discuter de votre intérêt pour les
@@ -71,41 +71,57 @@ export default {
                 clé
                 pour réussir votre aventure internationale.</p>
         </div>
-        <form @submit.prevent="submitForm">
-            <div>
-                <label for="surname">Prénom *</label>
-                <input type="text" id="surname" name="surname" v-model="surname" placeholder="William" required="" />
-            </div>
-            <div>
-                <label for="name">Nom *</label>
-                <input type="text" id="name" name="name" v-model="name" placeholder="Shakespeare" required="" />
-            </div>
-            <div>
-                <label for="email">Adresse mail *</label>
-                <input type="email" id="email" name="email" v-model="email" placeholder="william.shakespeare@yahoo.com"
-                    required="" />
-            </div>
-            <div>
-                <label for="study">Votre situation</label>
-                <select type="text" id="study" name="study" v-model="study" required="">
-                    <option value="">--Choisissez une option--</option>
-                    <option value="lycee">Lycéen(ne)</option>
-                    <option value="superieur">En études supérieures</option>
-                    <option value="vieactive">Dans la vie active</option>
-                    <option value="parent">Parent</option>
-                </select>
-            </div>
-            <div>
-                <label for="email">Objet *</label>
-                <input type="text" id="object" name="object" v-model="object" placeholder="Question concernant..."
-                    required="" />
-            </div>
-            <div>
-                <label>Message *</label>
-                <textarea type="text" id="name" name="message" v-model="message"
-                    placeholder="Votre message ici !"></textarea>
-            </div>
-            <button type="submit">Envoyer</button>
-        </form>
+        <div class="p-8 md:px-32 md:py-20">
+            <form class="flex flex-col gap-8" @submit.prevent="submitForm">
+                <div class="flex flex-col gap-6 w-full">
+                    <div class="flex flex-col md:flex-row gap-4">
+                        <div class="flex flex-col gap-2 w-full">
+                            <label class="italic" for="surname">Prénom *</label>
+                            <input class="border rounded shadow-md border-red-800 px-4 py-2" type="text" id="surname"
+                                name="surname" v-model="surname" placeholder="William" required />
+                        </div>
+                        <div class="flex flex-col gap-2 w-full">
+                            <label class="italic" for="name">Nom *</label>
+                            <input class="border rounded shadow-md border-red-800 px-4 py-2" type="text" id="name" name="name"
+                                v-model="name" placeholder="Shakespeare" required />
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-4">
+                        <div class="flex flex-col gap-2 w-full">
+                            <label class="italic" for="email">Adresse mail *</label>
+                            <input class="border rounded border-red-800 px-4 py-2" type="email" id="email" name="email"
+                                v-model="email" placeholder="william.shakespeare@yahoo.com" required />
+                        </div>
+                        <div class="flex flex-col gap-2 md:w-1/2">
+                            <label class="italic" for="study">Situation</label>
+                            <select class="border rounded shadow-md border-red-800 px-4 py-2" type="text" id="study" name="study"
+                                v-model="study" required>
+                                <option value="">-- Choisissez une option --</option>
+                                <option value="lycee">Lycéen(ne)</option>
+                                <option value="superieur">En études supérieures</option>
+                                <option value="vieactive">Dans la vie active</option>
+                                <option value="parent">Parent</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <div class="flex flex-col gap-2">
+                        <label class="italic" for="email">Objet *</label>
+                        <input class="border rounded shadow-md border-red-800 px-4 py-2" type="text" id="object" name="object"
+                            v-model="object" placeholder="Question concernant..." required />
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label class="italic">Message *</label>
+                        <textarea class="border rounded shadow-md border-red-800 px-4 py-2" type="text" id="name" name="message"
+                            v-model="message" placeholder="Votre message ici !" rows="8"></textarea>
+                    </div>
+                </div>
+                <div class="flex justify-between">
+                    <div></div>
+                    <button type="submit" class="bg-red-900 text-white rounded shadow-md px-4 py-2">Envoyer</button>
+                </div>
+            </form>
+        </div>
     </section>
 </template>
