@@ -10,8 +10,8 @@ const { data: pages, status, error, refresh, clear } = await useAsyncData(
     <section class="col-span-12 grid grid-cols-12 bg-[url(/img/plageMatane_ashChloeLouise.jpg)] bg-cover opacity-80">
         <nav class="w-full text-white col-start-2 col-end-8">
             <div class="items-left pt-96 pb-16">
-                <h1 class="text-9xl font-bold ">Témoignages</h1>
-                <p class="text-2xl mt-6" >Retrouvez ici, les témoignages d’anciens étudiants ayant déjà réalisé l’échange au Canada.</p>
+                <h1 class="text-6xl md:text-9xl font-bold ">Témoignages</h1>
+                <p class="text-xl md:text-2xl mt-6" >Retrouvez ici, les témoignages d’anciens étudiants ayant déjà réalisé l’échange au Canada.</p>
             </div>
         </nav>
     </section>

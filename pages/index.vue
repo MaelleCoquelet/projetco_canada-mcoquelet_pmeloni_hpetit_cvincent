@@ -13,14 +13,14 @@ console.log(status.value)
   <div>
     <section
       class=" col-span-12 text-white grid grid-cols-12 bg-[url(/img/mainphoto.jpg)] p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20">
-      <h1 class="col-span-12 text-6xl sm:text-8xl md:text-8xl font-bold mt-14 sm:mt-14 md:mt-24 col-start-1 col-end-10">
+      <h1 class="col-span-12 text-6xl md:text-8xl font-bold mt-14 sm:mt-14 md:mt-24 col-start-1 col-end-10">
         Dépassez vos limites et prenez votre envol</h1>
-      <p class="col-span-12 text-lg sm:text-xl col-start-1 col-end-9 mt-8 sm:mt-14">Osez franchir un nouveau cap dans
+      <p class="col-span-12 text-lg md:text-xl col-start-1 col-end-9 mt-8 sm:mt-14">Osez franchir un nouveau cap dans
         votre parcours académique et personnel. L'échange universitaire au Canada est
         une opportunité unique d’élargir vos horizons, de découvrir de nouvelles méthodes d’enseignement, et de vivre
         une
         expérience inoubliable.</p>
-      <p class="col-span-12 text-lg sm:text-xl col-start-1 col-end-9 mt-4 sm:mt-5">Envie d’en savoir plus sur cette
+      <p class="col-span-12 text-lg md:text-xl col-start-1 col-end-9 mt-4 sm:mt-5">Envie d’en savoir plus sur cette
         aventure ? Explorez ce que ces cégeps canadiens peuvent vous offrir et comment
         vous pouvez en faire partie !</p>
       <button class="bg-red-700 text-white py-2 px-4 rounded mt-12 col-start-1 col-end-3 mb-10">
