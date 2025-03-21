@@ -85,9 +85,9 @@ const route = useRoute()
                     <li>Billet d’avion</li>
                     <li>Adaptateur de prise</li>
                 </ul>
-            </div>
+            </div></div>
         </div>
-    </section>
+        </section>
     <section class="bg-red-900 text-white">
         <h2 class="text-2xl font-bold mb-8">Chronologiquement</h2>
         <div>
@@ -111,7 +111,6 @@ const route = useRoute()
                 <h3>Profiter</h3>
             </div>
         </div>
-    </div>
     </section>
 
     <section>
