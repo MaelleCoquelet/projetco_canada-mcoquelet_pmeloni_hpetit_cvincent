@@ -30,17 +30,17 @@ onBeforeUnmount(() => {
 
 <template>
     <header
-        class="sticky top-0 flex items-center justify-between text-zinc-50 text-[28px] p-8 h-24 bg-red-900 bg-opacity-80 md:px-20">
+        class="sticky top-0 flex items-center justify-between text-zinc-50 text-[28px] p-8 h-24 bg-red-900 bg-opacity-80 md:px-20 z-40">
         <div class="flex justify-between items-center">
             <a href="../" :class="{ 'hidden': isMenuOpen }">
                 <LogoLiftoff class="w-16 h-16" />
             </a>
         </div>
-        <a href="../" class="opacity-0 absolute z-10 md:hidden"
+        <a href="../" class="opacity-0 absolute z-40 md:hidden"
             :class="{ 'opacity-100 transform transition duration-500': isMenuOpen }"><img
                 src=" ../public/icons/logo_mmi_white.png" alt="Logo de LiftOff Mmi" class="h-[50px]"></a>
         <button
-            class="relative z-10 flex h-4 w-6 flex-col justify-between md:hidden *:block *:ease *:h-[2px] *:w-full *:transform *:rounded-full *:bg-white *:transition *:duration-300"
+            class="relative z-40 flex h-4 w-6 flex-col justify-between md:hidden *:block *:ease *:h-[2px] *:w-full *:transform *:rounded-full *:bg-white *:transition *:duration-300"
             @click="toggleMenu">
             <span :class="{ 'translate-y-[6px] rotate-45': isMenuOpen }"></span>
             <span :class="{ 'opacity-0': isMenuOpen }"></span>

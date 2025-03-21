@@ -4,7 +4,7 @@ import LogoFullLiftoff from './LogoFullLiftoff.vue';
 </script>
 
 <template>
-    <footer class="bg-red-900 p-8">
+    <footer class="bg-red-900 p-8 z-50">
         <nav class="flex flex-col gap-8 text-lg text-zinc-50 md:flex-row md:justify-center md:gap-12">
             <div class="flex justify-between md:flex-row-reverse md:items-center md:content-around md:gap-12">
                 <div class="flex flex-col gap-5 md:flex-row md:gap-12">
