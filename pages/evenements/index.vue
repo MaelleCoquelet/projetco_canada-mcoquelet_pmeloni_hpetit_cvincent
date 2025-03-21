@@ -11,8 +11,8 @@ console.log(status.value)
     <section class="col-span-12 grid grid-cols-12 bg-zinc-600">
         <nav class="w-full text-white col-start-2 col-end-8">
             <div class="items-left pt-96 pb-16">
-                <h1 class="text-9xl font-bold ">Événements</h1>
-                <p class="text-2xl" >Nous organisons différents évènements pour vous permettre d’entrer en contact avec d’anciens étudiants déjà partis.</p>
+                <h1 class="text-6xl md:text-9xl font-bold ">Événements</h1>
+                <p class="text-xl md:text-2xl" >Nous organisons différents évènements pour vous permettre d’entrer en contact avec d’anciens étudiants déjà partis.</p>
             </div>
         </nav>
     </section>
