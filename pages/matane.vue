@@ -6,9 +6,9 @@ const route = useRoute()
     <section class="col-span-12 grid grid-cols-12 bg-[url(/img/matane.jpg)]">
         <nav class="w-full text-white col-start-2 col-end-8">
             <div class="items-left pt-96 pb-16">
-                <h1 class="text-9xl font-bold ">MATANE</h1>
-                <h2 class="text-6xl font-bold">CEGEP</h2>
-                <h3 class="text-2xl"> Matane, QC, Canada</h3>
+                <h1 class="text-6xl md:text-9xl font-bold ">MATANE</h1>
+                <h2 class="text-3xl md:text-6xl font-bold">CEGEP</h2>
+                <h3 class="text-xl md:text-2xl"> Matane, QC, Canada</h3>
             </div>
         </nav>
     </section>
@@ -72,7 +72,7 @@ const route = useRoute()
     <!-- Temoignages -->
 
     <section class="col-span-12 grid grid-cols-12 text-black bg-red-100">
-        <div class="col-start-3 col-end-11 mt-16 mb-16 -z-10">
+        <div class="col-start-3 col-end-11 mt-16 mb-16">
             <h5 class="text-2xl font-bold mb-8">Qu’en disent les étudiants ?</h5>
             <div class="relative">
 

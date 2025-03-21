@@ -6,9 +6,9 @@ const route = useRoute()
     <section class="col-span-12 grid grid-cols-12 bg-[url(/img/vanier.jpg)]">
         <nav class="w-full text-white col-start-2 col-end-8">
             <div class="items-left pt-96 pb-16">
-                <h1 class="text-9xl font-bold">VANIER</h1>
-                <h2 class="text-6xl font-bold">CEGEP/COLLEGE</h2>
-                <h3 class="text-2xl"> Montréal, QC, Canada</h3>
+                <h1 class="text-6xl md:text-9xl font-bold">VANIER</h1>
+                <h2 class="text-3xl md:text-6xl font-bold">CEGEP/COLLEGE</h2>
+                <h3 class="text-xl md:text-2xl"> Montréal, QC, Canada</h3>
             </div>
         </nav>
     </section>
