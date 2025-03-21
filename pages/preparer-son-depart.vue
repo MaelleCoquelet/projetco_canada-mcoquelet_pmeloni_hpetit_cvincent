@@ -47,8 +47,9 @@ const route = useRoute()
         </div>
     </section>
 
-    <section>
-        <h2>Les documents à avoir</h2>
+    <section class="col-span-12 grid grid-cols-12">
+        <div class="col-start-3 col-end-11 mt-16 mb-16">
+        <h2 class="text-2xl font-bold mb-8">Les documents à avoir</h2>
         <div>
             <div>
                 <h3>Documents académiques</h3>
@@ -87,8 +88,8 @@ const route = useRoute()
             </div>
         </div>
     </section>
-    <section>
-        <h2>Chronologiquement</h2>
+    <section class="bg-red-900 text-white">
+        <h2 class="text-2xl font-bold mb-8">Chronologiquement</h2>
         <div>
             <div>
                 <h3>Préparer le premier dossier pour l’IUT</h3>
@@ -110,10 +111,11 @@ const route = useRoute()
                 <h3>Profiter</h3>
             </div>
         </div>
+    </div>
     </section>
 
     <section>
-        <h2>Conseils importants</h2>
+        <h2 class="text-2xl font-bold mb-8">Conseils importants</h2>
         <div>
             <div>
                 <h3>Faites les démarches liées à l’assurance maladie le plus tôt possible</h3>
