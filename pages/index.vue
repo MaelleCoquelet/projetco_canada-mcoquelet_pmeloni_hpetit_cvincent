@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { formatDate } from '~/utils/dateUtils';
 const route = useRoute()
 import '../styles/styles.css';
 
@@ -110,7 +111,7 @@ console.log(status.value)
               class="bg-red-900 text-white shadow-lg rounded-xl p-6 hover:scale-105 transform transition duration-300 ">
               <NuxtLink :to="`/evenements/${page.id}`">
                 <h3 class="text-2xl font-semibold mb-2">{{ page.acf.titre }}</h3>
-                <p class="text-lg text-gray-300 mb-2">{{ page.acf.date }}</p>
+                <p class="text-lg text-gray-300 mb-2">{{ formatDate(page.acf.date) }}</p>
                 <p class="text-sm">{{ page.acf.texte_1.length > 250 ? page.acf.texte_1.substring(0, 250) + '...' :
                   page.acf.texte_1 }}</p>
 

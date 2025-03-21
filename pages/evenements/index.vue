@@ -1,14 +1,18 @@
 <script setup lang="ts">
+import { formatDate } from '~/utils/dateUtils';
 const route = useRoute();
 const { data: pages, status, error, refresh, clear } = await useAsyncData(
   'pages',
   () => $fetch('https://liftoff-mmi.chloe-vct.fr/wp-json/wp/v2/pages')
 )
 console.log(status.value)
+
+
+
 </script>
 
 <template>
-    <section class="col-span-12 grid grid-cols-12 bg-zinc-600">
+    <section class="col-span-12 grid grid-cols-12 bg-[url(/img/evenements.jpg)] bg-cover opacity-80">
         <nav class="w-full text-white col-start-2 col-end-8">
             <div class="items-left pt-96 pb-16">
                 <h1 class="text-6xl md:text-9xl font-bold ">Événements</h1>
@@ -33,7 +37,7 @@ console.log(status.value)
             <li v-for="page in pages" :key="page.id" class="bg-red-900 text-white shadow-lg rounded-xl p-6 hover:scale-105 transform transition duration-300 ">
                 <NuxtLink :to="`/evenements/${page.id}`">
                 <h3 class="text-2xl font-semibold mb-2">{{ page.acf.titre }}</h3>
-                <p class="text-lg text-gray-300 mb-2">{{ page.acf.date }}</p>
+                <p class="text-lg text-gray-300 mb-2">{{ formatDate(page.acf.date) }}</p>
                 <p class="text-sm">{{ page.acf.texte_1.length > 250 ? page.acf.texte_1.substring(0, 250) + '...' : page.acf.texte_1 }}</p>
             
     <button class="px-6 py-3 mt-5 bg-white text-red-900 font-semibold rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition">En savoir plus ></button>
