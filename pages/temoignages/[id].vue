@@ -28,7 +28,7 @@ watchEffect(async () => {
 </script>
 
 <template>
-  
+
   <div v-if="status === 'pending'" class="text-center text-lg font-semibold">
     Chargement...
   </div>
@@ -38,48 +38,66 @@ watchEffect(async () => {
   </div>
 
   <!-- Div principale avec l'image en background -->
-  <div
-    class="w-full h-screen bg-cover bg-no-repeat bg-center"
-    :style="{ backgroundImage: imageUrl ? `url(${imageUrl})` : '' }"
-  >
+  <div class="w-full mih-screen bg-cover bg-no-repeat bg-center pb-24"
+    :style="{ backgroundImage: imageUrl ? `url(${imageUrl})` : '' }">
     <div class="col-span-12 w-full">
       <div v-if="temoignage">
         <nav class="w-full text-white">
           <div class="items-left pt-96 pb-16   bg-black bg-opacity-50">
-            <h1 class="text-9xl font-bold mx-16">{{ temoignage.acf.nom_prenom }}</h1>
-            <p class="text-2xl mx-16 mt-6">{{ temoignage.acf.date_echanges_scolaire }}</p>
+            <h1 class="text-6xl md:text-9xl font-bold mx-16">{{ temoignage.acf.nom_prenom }}</h1>
+            <p class="text-xl md:text-2xl mx-16 mt-6">{{ temoignage.acf.date_echanges_scolaire }}</p>
           </div>
         </nav>
 
-        <div class="bg-white text-black container mx-auto p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20">
-          <h3 class="font-bold text-xl">Qu'est-ce qui vous a motivé à choisir le Québec pour votre échange universitaire ?</h3>
-          <p>{{ temoignage.acf.question1 }}</p>
+        <div class="bg-white text-black p-4 sm:p-8 md:p-16 mx-8 md:mx-16 flex flex-col gap-4 md:gap-8">
+          <div>
+            <h3 class="font-bold text-xl">Quelles différences culturelles vous ont le plus marqué en arrivant au Québec
+              ?</h3>
+            <p>{{ temoignage.acf.question2 }}</p>
+          </div>
 
-          <h3 class="font-bold text-xl">Quelles différences culturelles vous ont le plus marqué en arrivant au Québec ?</h3>
-          <p>{{ temoignage.acf.question2 }}</p>
+          <div>
+            <h3 class="font-bold text-xl">Quelles sont les différences entre le système universitaire québécois et celui
+              français ?</h3>
+            <p>{{ temoignage.acf.question3 }}</p>
+          </div>
 
-          <h3 class="font-bold text-xl">Quelles sont les différences entre le système universitaire québécois et celui français ?</h3>
-          <p>{{ temoignage.acf.question3 }}</p>
+          <div>
+            <h3 class="font-bold text-xl">Y a-t-il une tradition ou un aspect de la culture québécoise qui vous a
+              particulièrement plu ?</h3>
+            <p>{{ temoignage.acf.question4 }}</p>
+          </div>
 
-          <h3 class="font-bold text-xl">Y a-t-il une tradition ou un aspect de la culture québécoise qui vous a particulièrement plu ?</h3>
-          <p>{{ temoignage.acf.question4 }}</p>
+          <div>
+            <h3 class="font-bold text-xl">Y a-t-il des astuces ou des choses à savoir pour réussir son intégration, sur
+              le
+              plan académique ou personnel ?</h3>
+            <p>{{ temoignage.acf.question5 }}</p>
+          </div>
 
-          <h3 class="font-bold text-xl">Y a-t-il des astuces ou des choses à savoir pour réussir son intégration, sur le plan académique ou personnel ?</h3>
-          <p>{{ temoignage.acf.question5 }}</p>
+          <div>
+            <h3 class="font-bold text-xl">Pouvez-vous partager une anecdote marquante ou drôle qui illustre votre vie au
+              Québec ?</h3>
+            <p>{{ temoignage.acf.question6 }}</p>
+          </div>
 
-          <h3 class="font-bold text-xl">Pouvez-vous partager une anecdote marquante ou drôle qui illustre votre vie au Québec ?</h3>
-          <p>{{ temoignage.acf.question6 }}</p>
+          <div>
+            <h3 class="font-bold text-xl">Avez-vous rencontré des difficultés particulières pendant votre séjour, si
+              oui,
+              voulez-vous en parler ?</h3>
+            <p>{{ temoignage.acf.question7 }}</p>
+          </div>
 
-          <h3 class="font-bold text-xl">Avez-vous rencontré des difficultés particulières pendant votre séjour, si oui, voulez-vous en parler ?</h3>
-          <p>{{ temoignage.acf.question7 }}</p>
-
-          <h3 class="font-bold text-xl">Avec le recul, souhaitez-vous réitérer cette expérience ? Si oui, changeriez-vous quelque chose ?</h3>
-          <p>{{ temoignage.acf.question8 }}</p>
+          <div>
+            <h3 class="font-bold text-xl">Avec le recul, souhaitez-vous réitérer cette expérience ? Si oui,
+              changeriez-vous quelque chose ?</h3>
+            <p>{{ temoignage.acf.question8 }}</p>
+          </div>
         </div>
       </div>
-    
+
     </div>
-    
+
   </div>
 
 </template>
