@@ -6,7 +6,7 @@ const route = useRoute()
     <section class="md:col-span-12 md:grid md:grid-cols-12 bg-[url(/img/matane.jpg)] p-8">
         <nav class="w-full text-white md:col-start-2 md:col-end-8">
             <div class="items-left pt-96 pb-16">
-                <h1 class="text-6xl md:text-9xl font-bold ">MATANE</h1>
+                <h1 class="text-6xl md:text-9xl font-bold">MATANE</h1>
                 <h2 class="text-3xl md:text-6xl font-bold">CEGEP</h2>
                 <h3 class="text-xl md:text-2xl"> Matane, QC, Canada</h3>
             </div>
@@ -81,7 +81,8 @@ const route = useRoute()
 
 
                 <p class="text-9xl absolute top-0 -left-5 text-red-900 opacity-25">“</p>
-                <p class="ml-10 md:ml-16 text-lg">Que ce soit sur le plan académique ou personnel, il faut se rappeler que
+                <p class="ml-10 md:ml-16 text-lg">Que ce soit sur le plan académique ou personnel, il faut se rappeler
+                    que
                     c’est
                     une expérience unique que nous vivrons peut-être une seule fois. Il est important d’en profiter au
                     maximum, de saisir toutes les occasions qui se présentent pour découvrir de nouvelles choses et
@@ -94,7 +95,8 @@ const route = useRoute()
 
             <div class="relative mt-10">
                 <p class="text-9xl absolute top-0 -left-5 text-red-900 opacity-25">“</p>
-                <p class="ml-10 md:ml-16 text-lg">La générosité et l’accueil des québécois était particulièrement appréciable.
+                <p class="ml-10 md:ml-16 text-lg">La générosité et l’accueil des québécois était particulièrement
+                    appréciable.
                     De
                     même, le fait que tous les québécois nous disent qu’une poutine se mange “au bon moment” était assez
                     drôle et marquant.”</p>
@@ -104,7 +106,7 @@ const route = useRoute()
         </div>
 
     </section>
-    <section class="bg-red-100 flex justify-center p-8">
+    <section class="bg-red-100 flex justify-center pb-10">
         <a href="/temoignages"
             class="text-white flex bg-red-900 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-base md:text-lg px-6 py-3 text-center me-2 mb-2">Voir
             plus de témoignages</a>
