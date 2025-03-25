@@ -3,7 +3,7 @@
 
 <template>
     <div class="flex flex-col gap-8 p-8">
-        <h1 class="text-5xl md:text-6xl ">Conditions générales d’utilisations</h1>
+        <h1 class="text-5xl md:text-6xl">Conditions générales d’utilisations</h1>
         <div class="flex flex-col gap-2">
             <h2 class="text-xl md:text-3xl">1. Informations Légales et Champ d'Application</h2>
             <h3 class="text-lg md:text-2xl">1.1. Informations Légales</h3>
