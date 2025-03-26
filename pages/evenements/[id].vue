@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { formatDate } from '~/utils/dateUtils';
 const route = useRoute();
 const evenementId = route.params.id; // Récupère l'ID de l'URL
 
@@ -57,7 +58,7 @@ watchEffect(async () => {
                     d="M6 2a1 1 0 011 1v1h6V3a1 1 0 112 0v1h1a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2h1V3a1 1 0 011-1zM4 8v8h12V8H4z">
                   </path>
                 </svg>
-                <p class="text-lg">{{ evenement.acf.date }}</p>
+                <p class="text-lg">{{ formatDate(evenement.acf.date) }}</p>
               </div>
               <div class="flex items-center gap-2">
                 <div>
