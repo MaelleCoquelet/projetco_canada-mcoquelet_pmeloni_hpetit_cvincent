@@ -25,6 +25,15 @@ watchEffect(async () => {
     }
   }
 });
+
+useSeoMeta({
+  title: 'LiftOff MMI, découvrez ce témoignages d un anciens étudiants',
+  ogTitle: 'LiftOff MMI, découvrez ce témoignages d un anciens étudiants',
+  description: 'Avec LiftOff MMI, découvrez les témoignages d’anciens étudiants ayant déjà réalisé l’échange au Canada.',
+  ogDescription: 'Avec LiftOff MMI, découvrez les témoignages d’anciens étudiants ayant déjà réalisé l’échange au Canada.',
+
+})
+
 </script>
 
 <template>
@@ -38,8 +47,12 @@ watchEffect(async () => {
   </div>
 
   <!-- Div principale avec l'image en background -->
-  <div class="w-full mih-screen bg-cover bg-no-repeat bg-center pb-24"
-    :style="{ backgroundImage: imageUrl ? `url(${imageUrl})` : '' }">
+  <div class="w-full min-h-screen bg-cover lg:bg-center bg-no-repeat bg-top pb-24"
+    :style="{ 
+      backgroundImage: imageUrl ? `url(${imageUrl})` : '',
+      backgroundSize: 'cover',
+      backgroundPosition: 'top 30% center' 
+    }">
     <div class="col-span-12 w-full">
       <div v-if="temoignage">
         <nav class="w-full text-white">

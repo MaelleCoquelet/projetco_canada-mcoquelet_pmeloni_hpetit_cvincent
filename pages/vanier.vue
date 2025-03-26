@@ -1,5 +1,13 @@
 <script setup lang="ts">
 const route = useRoute()
+
+useSeoMeta({
+  title: 'LiftOff MMI, découvrez Vanier au Québec',
+  ogTitle: 'LiftOff MMI, découvrez Vanier au Québec',
+  description: 'Avec LiftOff MMI, découvrez le Cégep de Vanier, un établissement d’enseignement supérieur situé dans la région de la Gaspésie au Québec. Découvrez son histoire, ses formations et son environnement unique.',
+  ogDescription: 'Avec LiftOff MMI, découvrez le Cégep de Vanier, un établissement d’enseignement supérieur situé dans la région de la Gaspésie au Québec. Découvrez son histoire, ses formations et son environnement unique.',
+
+})
 </script>
 
 <template>

@@ -4,6 +4,14 @@ const { data: pages, status, error, refresh, clear } = await useAsyncData(
   'posts',
   () => $fetch('https://liftoff-mmi.chloe-vct.fr/wp-json/wp/v2/posts')
 )
+
+useSeoMeta({
+  title: 'LiftOff MMI, découvrez les témoignages des anciens étudiants',
+  ogTitle: 'LiftOff MMI, découvrez les témoignages des anciens étudiants',
+  description: 'Avec LiftOff MMI, découvrez les témoignages d’anciens étudiants ayant déjà réalisé l’échange au Canada.',
+  ogDescription: 'Avec LiftOff MMI, découvrez les témoignages d’anciens étudiants ayant déjà réalisé l’échange au Canada.',
+
+})
 </script>
 
 <template>
