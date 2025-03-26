@@ -26,6 +26,14 @@ watchEffect(async () => {
     }
   }
 });
+
+useSeoMeta({
+  title: 'LiftOff MMI, découvrez tous les évènements que propose le département MMI de Montbéliard pour vous faire découvrir le Canada',
+  ogTitle: 'LiftOff MMI, découvrez tous les évènements que propose le département MMI de Montbéliard pour vous faire découvrir le Canada',
+  description: 'LiftOff MMI vous propose de découvrir tous les évènements organisés par le département MMI de Montbéliard pour vous faire découvrir le Canada.',
+  ogDescription: 'LiftOff MMI vous propose de découvrir tous les évènements organisés par le département MMI de Montbéliard pour vous faire découvrir le Canada.',
+
+})
 </script>
 
 <template>

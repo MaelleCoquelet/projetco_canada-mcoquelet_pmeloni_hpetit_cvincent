@@ -25,6 +25,15 @@ watchEffect(async () => {
     }
   }
 });
+
+useSeoMeta({
+  title: 'LiftOff MMI, découvrez ce témoignages d un anciens étudiants',
+  ogTitle: 'LiftOff MMI, découvrez ce témoignages d un anciens étudiants',
+  description: 'Avec LiftOff MMI, découvrez les témoignages d’anciens étudiants ayant déjà réalisé l’échange au Canada.',
+  ogDescription: 'Avec LiftOff MMI, découvrez les témoignages d’anciens étudiants ayant déjà réalisé l’échange au Canada.',
+
+})
+
 </script>
 
 <template>

@@ -3,6 +3,15 @@ import { formatDate } from '~/utils/dateUtils';
 const route = useRoute()
 import '../styles/styles.css';
 
+
+useSeoMeta({
+  title: 'LiftOff MMI, échange universitaire au Canada',
+  ogTitle: 'LiftOff MMI, échange universitaire au Canada',
+  description: 'Découvrez les échanges universitaires entre la France et le Canada avec LiftOff MMI. Partez étudier au Québec et découvrez une nouvelle culture. Avec le département MMI de Montbéliard',
+  ogDescription: 'Découvrez les échanges universitaires entre la France et le Canada avec LiftOff MMI. Partez étudier au Québec et découvrez une nouvelle culture. Avec le département MMI de Montbéliard',
+
+})
+
 const { data: pages, status, error, refresh, clear } = await useAsyncData(
   'pages',
   () => $fetch('https://liftoff-mmi.chloe-vct.fr/wp-json/wp/v2/pages')
