@@ -29,8 +29,8 @@
     --num-users: 0;
   }
   to {
-    --num-transactions: 142;
+    --num-transactions: 15;
     --num-assets: 7;
-    --num-users: 15;
+    --num-users: 142;
   }
 }
