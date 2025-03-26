@@ -6,8 +6,8 @@ const route = useRoute()
     <section class="col-span-12 grid grid-cols-12 bg-[url(/img/depart.jpg)]">
         <nav class="w-full text-white col-start-2 col-end-8">
             <div class="items-left pt-96 pb-16 flex flex-col gap-8">
-                <h1 class="text-8xl font-bold">Préparer son départ</h1>
-                <h3 class="text-2xl">Vous trouverez sur cette page tout ce qu’il faut prévoir pour
+                <h1 class="text-4xl md:text-8xl font-bold">Préparer son départ</h1>
+                <h3 class="text-lg md:text-2xl">Vous trouverez sur cette page tout ce qu’il faut prévoir pour
                     un voyage serein.</h3>
             </div>
         </nav>
@@ -90,40 +90,40 @@ const route = useRoute()
         </div>
     </section>
 
-    <section class="bg-red-900 text-white">
+    <section class="bg-red-900 text-white p-4 pb-8">
         <h2 class="text-2xl font-bold mb-12 text-center pt-10">Chronologiquement</h2>
         <div class="grid grid-cols-12">
 
-        <div class="col-span-4 flex justify-end mb-10">
+        <div class="col-span-4 flex justify-end mb-4 md:mb-10">
                 <img src="/img/frise.png" alt="Frise chronologique" class="h-full">
         </div>
 
-            <div class="col-span-8 ml-10">
+            <div class="col-span-8 ml-6 md:ml-10">
                 <div class="">
-                    <h3 class="text-xl font-bold">Préparer le premier dossier pour l’IUT</h3>
+                    <h3 class="text-lg md:text-xl font-bold">Préparer le premier dossier pour l’IUT</h3>
                     <p>(passeport, relevé de notes de terminale, etc...)</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold mt-12">Commencer les démarches les plus longues</h3>
+                    <h3 class="text-lg md:text-xl font-bold mt-12">Commencer les démarches les plus longues</h3>
                     <p>(assurance, billets d’avion à l’avance, logement)</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold mt-12">Préparer son départ</h3>
+                    <h3 class="text-lg md:text-xl font-bold mt-12">Préparer son départ</h3>
                     <p>(AVE, forfait de téléphone, adaptateur, etc...)</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold mt-12">Récupérer les documents sur place</h3>
+                    <h3 class="text-lg md:text-xl font-bold mt-12">Récupérer les documents sur place</h3>
                     <p>(carte étudiante, carte d’assurance maladie)</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold mt-12">Profiter</h3>
+                    <h3 class="text-lg md:text-xl font-bold mt-12">Profiter</h3>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <section class="px-32 pb-10 bg-gray-50">
+    <section class="px-8 md:px-32 pb-10 bg-gray-50">
         <h2 class="text-3xl font-bold mb-8 mt-12 text-center ">Conseils importants</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300">
